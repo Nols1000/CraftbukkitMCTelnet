@@ -1,0 +1,11 @@
+user:
+    id:
+        0:
+            name: root
+        1:
+            name: nilsmargotti
+    name:
+        root:
+            id: 0
+        nilsmargotti:
+            id: 1
