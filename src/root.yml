@@ -1,6 +1,0 @@
-user:
-    password:
-        encrypted: false
-        password: root
-permissions:
-    - *

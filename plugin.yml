@@ -1,0 +1,56 @@
+name: MineWire
+main: dev.bukkit.Nols1000.MineWire.MineWire
+version: 0.0.6alpha
+depend: [WorldEdit]
+description: Telnet console access plugin.
+author: Nols1000
+
+commands:
+   minewire:
+      description: Get all MineWire commands.
+      usage: |
+        /<command> [option]
+        /<command> register [name] [password]
+        /<command> remove [name] [password]
+        /<command> update [name] [old password] [new password]
+      permission-message: You don't have <permission>
+   admin:
+      description: Send a Message on all admins who are connected.
+      usage: /<command> [Text]
+
+permissions:
+  minewire.*:
+    description: Gives access to all MineWire commands
+    children:
+      minewire.register: true
+      minewire.remove: true
+      minewire.remove.others: true
+      minewire.update: true
+      minewire.upadte.others: true
+      minewire.notifyadmin: true
+      minewire.isadmin: true
+  minewire.register:
+    description: Allows you to register new MineWire users
+    default: op
+  minewire.remove:
+    description: Allows you to remove yourself
+    default: true
+    children: 
+      minewire.remove.others: true    
+  minewire.remove.others:
+    description: Allows you to remove other MineWire users
+    default: op
+  minewire.update:
+    description: Allows you to update yourself
+    default: true
+    children: 
+      minewire.update.other: true
+  minewire.update.others:
+    description: Allows you to update other MineWire users
+    default: op
+  minewire.notifyadmin:
+    description: Allows you to send msg to all admins
+    default: op
+  minewire.isadmin:
+    description: Everyone who have this permissions will set as admin
+    default: op

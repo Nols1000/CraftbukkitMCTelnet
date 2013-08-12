@@ -1,8 +1,0 @@
-name: MCTelnet
-main: com.github.Nols1000.MCTelnet.MCTelnet
-version: 1.2.8
-description: Telnet console access plugin.
-author: bekvon (updated by Nols1000)
-commands:
-  telnet:
-    description: Root command of this plugin.
